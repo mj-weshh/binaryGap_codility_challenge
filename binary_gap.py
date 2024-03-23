@@ -22,12 +22,8 @@ def binaryGap(num):
 
      #if there are more than one gaps in the list(differences) then the loop is implemented
      else:
-          #this for loop looks for the greatest difference and assigns it to gap
-          for x in range(len(differences) - 1):
-               if differences[x] > differences[x + 1]:
-                    gap = differences[x]
-               elif differences[x] < differences[x + 1]:
-                    gap = differences[x + 1]
+          #if there are more than one, the greatest difference is assigned to gap
+          gap = max(differences)
                     
      #the function returns gap
      return gap
